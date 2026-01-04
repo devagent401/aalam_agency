@@ -5,7 +5,10 @@
   --dark-medium: #1C1C1C;
   --white-primary: #FFFFFF;
   --green-secondary: #05CA3C;
+  --purple-secondary: #8B5CF6;
   --gradient-btn: linear-gradient(270deg, #D4FE1A 0%, #39EEBE 100%);
+  --gradient-finance: linear-gradient(180deg, #010400 0%, #062000 100%);
+  --gradient-healthcare: linear-gradient(180deg, #1a0033 0%, #2d004d 100%);
 }
 
 @theme inline {
@@ -13,6 +16,7 @@
   --color-dark-medium: var(--dark-medium);
   --color-white-primary: var(--white-primary);
   --color-green-secondary: var(--green-secondary);
+  --color-purple-secondary: var(--purple-secondary);
 }
 
 @layer utilities {
@@ -47,5 +51,15 @@
   .bg-card-gradient {
     background: linear-gradient(180deg, #010400 0%, #062000 100%);
     box-shadow: 0px 0px 70px 0px rgba(12, 51, 0, 1) inset;
+  }
+
+  .bg-finance-gradient {
+    background: var(--gradient-finance);
+    box-shadow: 0px 0px 70px 0px rgba(12, 51, 0, 1) inset;
+  }
+
+  .bg-healthcare-gradient {
+    background: var(--gradient-healthcare);
+    box-shadow: 0px 0px 70px 0px rgba(75, 0, 130, 0.5) inset;
   }
 }
