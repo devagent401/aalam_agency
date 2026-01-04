@@ -27,4 +27,20 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
+
+  .border-gradient-btn {
+    position: relative;
+    background: var(--gradient-btn);
+    padding: 1px;
+    /* border-radius: 0.5rem; */
+    display: inline-block;
+  }
+
+  .border-gradient-btn>* {
+    background: var(--dark-deep) !important;
+    /* border-radius: calc(0.5rem - 1px); */
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 }

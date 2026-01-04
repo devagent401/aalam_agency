@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./ui/Button";
@@ -14,15 +14,39 @@ const navigationLinks = [
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsScrolled(scrollPosition > 10);
+        };
+
+        // Check initial scroll position
+        handleScroll();
+
+        // Add scroll event listener
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        // Cleanup
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-deep border-b border-dark-medium">
+        <nav
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+                ? "bg-dark-deep border-b border-dark-medium"
+                : "bg-transparent md:bg-transparent"
+                }`}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
                         <Image
-                            src="/logo.png"
+                            src="/files/logo.png"
                             alt="Aalam Logo"
                             width={120}
                             height={40}
@@ -37,7 +61,7 @@ export default function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="text-white-primary hover:text-green-secondary transition-colors duration-200 text-sm lg:text-base"
+                                className="text-white-primary hover:text-green-secondary transition-colors duration-200 text-sm lg:text-xl font-normal"
                             >
                                 {link.label}
                             </Link>

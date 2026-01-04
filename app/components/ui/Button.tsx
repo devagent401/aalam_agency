@@ -20,29 +20,25 @@ export default function Button({
         primary:
             "bg-gradient-btn text-dark-deep hover:opacity-90 active:scale-95",
         secondary:
-            "bg-transparent text-white-primary hover:opacity-80 active:scale-95 relative",
+            "bg-transparent text-white-primary text-base font-normal hover:opacity-80 active:scale-95",
     };
-
-    const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`.trim();
 
     if (variant === "secondary") {
         return (
             <button
-                className={`${baseStyles} ${className}`.trim()}
-                style={{
-                    background: "linear-gradient(270deg, #D4FE1A 0%, #39EEBE 100%)",
-                    padding: "1px",
-                }}
+                className={`border-gradient-btn inline-block rounded-full ${className}`.trim()}
                 {...props}
             >
                 <span
-                    className="block w-full h-full bg-transparent rounded-lg text-white-primary hover:opacity-80 active:scale-95 transition-all duration-200 flex items-center justify-center"
+                    className={`block w-full h-full rounded-full ${variantStyles.secondary} transition-all duration-200 flex items-center justify-center px-4 py-2 md:px-6 md:py-3`}
                 >
                     {children}
                 </span>
             </button>
         );
     }
+
+    const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`.trim();
 
     return (
         <button className={combinedClassName} {...props}>
