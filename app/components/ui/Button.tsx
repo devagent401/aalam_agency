@@ -14,11 +14,11 @@ export default function Button({
     ...props
 }: ButtonProps) {
     const baseStyles =
-        "px-4 py-2 md:px-6 md:py-3 rounded-lg font-medium transition-all duration-200 text-sm md:text-base inline-flex items-center justify-center";
+        "px-4 py-2 md:px-6 md:py-3  font-medium transition-all duration-200 text-sm md:text-base inline-flex items-center justify-center rounded-full";
 
     const variantStyles = {
         primary:
-            "bg-gradient-btn text-dark-deep hover:opacity-90 active:scale-95",
+            "bg-gradient-btn rounded-full text-dark-deep hover:opacity-90 active:scale-95",
         secondary:
             "bg-transparent text-white-primary text-base font-normal hover:opacity-80 active:scale-95",
     };

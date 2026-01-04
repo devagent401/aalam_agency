@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Button from "./ui/Button";
 
@@ -26,13 +25,12 @@ export default function Hero() {
             </div>
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-5  items-center ">
                     {/* Left Section - Content */}
-                    <div className="space-y-6 md:space-y-8">
+                    <div className=" col-span-3 space-y-6 md:space-y-8 w-full">
                         {/* Headline */}
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                            <span className="text-white-primary">BUILDING THE</span>
-                            <br />
+                        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
+                            <span className="text-white-primary">BUILDING THE </span>
                             <span className="text-gradient-green">INTELLIGENT</span>
                             <br />
                             <span className="text-gradient-green">INFRASTRUCTURE OF</span>
@@ -55,7 +53,7 @@ export default function Hero() {
                     </div>
 
                     {/* Right Section - Character Image */}
-                    <div className="relative flex justify-center lg:justify-end">
+                    <div className="relative flex justify-center lg:justify-end col-span-2">
                         <div className="relative w-full max-w-md lg:max-w-lg">
                             <Image
                                 src="/files/object/person1.png"
@@ -65,51 +63,55 @@ export default function Hero() {
                                 className="w-full h-auto object-contain"
                                 priority
                             />
-                        </div>
-                    </div>
-                </div>
+                            {/* Social Proof Box */}
+                            <div className=" flex flex-col md:flex-row items-center justify-center md:justify-end gap-6 border border-white-primary rounded-2xl">
+                                <div className="border border-dark-medium rounded-lg px-6 py-4 flex items-center gap-4 md:gap-6">
+                                    {/* Overlapping Circles */}
+                                    <div className="flex -space-x-2">
+                                        {[1, 2, 3].map((i) => (
+                                            <div
+                                                key={i}
+                                                className="w-10 h-10 rounded-full bg-gradient-btn border-2 border-dark-medium"
+                                            />
+                                        ))}
+                                    </div>
+                                    <span className="text-white-primary text-sm md:text-base">
+                                        Loved by 20+ Founder
+                                    </span>
+                                </div>
 
-                {/* Social Proof Box */}
-                <div className="mt-12 md:mt-16 lg:mt-20 flex flex-col md:flex-row items-center justify-center md:justify-end gap-6">
-                    <div className="bg-dark-medium border border-dark-medium rounded-lg px-6 py-4 flex items-center gap-4 md:gap-6">
-                        {/* Overlapping Circles */}
-                        <div className="flex -space-x-2">
-                            {[1, 2, 3].map((i) => (
-                                <div
-                                    key={i}
-                                    className="w-10 h-10 rounded-full bg-gradient-btn border-2 border-dark-medium"
-                                />
-                            ))}
-                        </div>
-                        <span className="text-white-primary text-sm md:text-base">
-                            Loved by 20+ Founder
-                        </span>
-                    </div>
+                                {/* Clutch Rating */}
+                                <div className=" border border-dark-medium rounded-lg px-6 py-4 flex items-center gap-3">
+                                    <div className="flex items-center gap-1">
+                                        <Image src="/files/icons/cicon.svg" alt="CICON" width={20} height={20} className="min-w-5 min-h-5" />
 
-                    {/* Clutch Rating */}
-                    <div className="bg-dark-medium border border-dark-medium rounded-lg px-6 py-4 flex items-center gap-3">
-                        <div className="flex items-center gap-1">
-                            <span className="text-red-500 text-lg md:text-xl font-bold">C</span>
-                            <div className="flex gap-0.5">
-                                {[1, 2, 3, 4, 5].map((star) => (
-                                    <svg
-                                        key={star}
-                                        className="w-4 h-4 md:w-5 md:h-5 text-red-500 fill-current"
-                                        viewBox="0 0 20 20"
-                                    >
-                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                    </svg>
-                                ))}
+                                    </div>
+                                    <div>
+                                        <div className="flex gap-0.5">
+                                            {[1, 2, 3, 4, 5].map((star) => (
+                                                <svg
+                                                    key={star}
+                                                    className="w-3.5 h-3.5 text-red-500 fill-current"
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                                </svg>
+                                            ))}
+                                        </div>
+                                        <span className="text-white-primary text-[12px] whitespace-nowrap">
+                                            Rated 4.7 on Clutch
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <span className="text-white-primary text-sm md:text-base">
-                            Rated 4.7 on Clutch
-                        </span>
                     </div>
                 </div>
 
+
+
                 {/* Scroll Indicator */}
-                <div className="mt-8 md:mt-12 flex flex-col items-center justify-center gap-2">
+                {/* <div className="mt-8 md:mt-12 flex flex-col items-center justify-center gap-2">
                     <span className="text-white-primary text-sm opacity-70">
                         Scroll Down
                     </span>
@@ -124,7 +126,7 @@ export default function Hero() {
                     >
                         <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
-                </div>
+                </div> */}
             </div>
         </section>
     );
