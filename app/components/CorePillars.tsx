@@ -31,10 +31,10 @@ const pillars = [
 
 export default function CorePillars() {
     return (
-        <section className="py-12 md:py-16 lg:py-20 bg-dark-deep">
+        <section className="py-12 bg-dark-deep">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Title */}
-                <h2 className="text-white-primary text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12">
+                <h2 className="text-white-primary text-2xl md:text-3xl lg:text-[40px] font-semibold mb-8 md:mb-12">
                     Our Core Pillars
                 </h2>
 
@@ -47,7 +47,7 @@ export default function CorePillars() {
                             title={pillars[0].title}
                             description={pillars[0].description}
                             showButton={pillars[0].showButton}
-                            className="h-[621px]"
+                            className="h-[626px]"
                             imageClassName="w-[16.875rem] h-[16.875rem]"
                             imageContainerClassName="justify-center my-10"
                         />
