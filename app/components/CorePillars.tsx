@@ -12,6 +12,7 @@ const pillars = [
         icon: "/files/icons/ractangular.png",
         title: "WEB3 & Blockchain",
         description: "DApps, Smart Contracts, NFT & DeFi Protocols",
+        info: ["Layer 2 Solutions & Scaling", "Decenstizlized Exchanges (DEX)", "Oracles & Data Feeds"],
         showButton: false,
     },
     {
@@ -38,40 +39,46 @@ export default function CorePillars() {
                 </h2>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+                <div className="grid grid-cols-5 gap-6 md:gap-6">
                     {/* AI & Automation - Left column, row 1, spans 2 rows */}
-                    <div className="md:row-span-1 border">
+                    <div className="col-span-2">
                         <Card
                             icon={pillars[0].icon}
                             title={pillars[0].title}
                             description={pillars[0].description}
                             showButton={pillars[0].showButton}
-                            className="h-full"
+                            className="h-[621px]"
+                            imageClassName="w-[16.875rem] h-[16.875rem]"
+                            imageContainerClassName="justify-center my-10"
                         />
                     </div>
-                    <div className="col-span-3 space-y-8">
-                        {/* WEB3 & Blockchain - Right column, row 1 */}
+                    <div className="col-span-3 space-y-6">
                         <Card
                             icon={pillars[1].icon}
                             title={pillars[1].title}
                             description={pillars[1].description}
                             showButton={pillars[1].showButton}
+                            info={pillars[1].info}
+                            imageClassName="w-60 md:h-60"
+                            className="h-[300px]"
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                            {/* Algorithmic Trading - Left column, row 2 (below AI & Automation) */}
                             <Card
                                 icon={pillars[2].icon}
                                 title={pillars[2].title}
                                 description={pillars[2].description}
                                 showButton={pillars[2].showButton}
+                                imageClassName="w-[12.545rem] h-[12.545rem] rotate-[20deg] -mt-14"
+                                className="h-[305px]"
                             />
 
-                            {/* Fintech & Banking - Right column, row 2 */}
                             <Card
                                 icon={pillars[3].icon}
                                 title={pillars[3].title}
                                 description={pillars[3].description}
                                 showButton={pillars[3].showButton}
+                                imageClassName="w-[9.601rem] h-[9.601rem] "
+                                className="h-[305px]"
                             />
                         </div>
                     </div>
