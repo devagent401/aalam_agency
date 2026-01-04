@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <p>this is a test</p>
-    </div>
+    <main className="min-h-screen bg-dark-deep">
+      <Navbar />
+      <Hero />
+    </main>
   );
 }

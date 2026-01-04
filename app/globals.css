@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+:root {
+  --dark-deep: #111111;
+  --dark-medium: #1C1C1C;
+  --white-primary: #FFFFFF;
+  --green-secondary: #05CA3C;
+  --gradient-btn: linear-gradient(270deg, #D4FE1A 0%, #39EEBE 100%);
+}
+
+@theme inline {
+  --color-dark-deep: var(--dark-deep);
+  --color-dark-medium: var(--dark-medium);
+  --color-white-primary: var(--white-primary);
+  --color-green-secondary: var(--green-secondary);
+}
+
+@layer utilities {
+  .bg-gradient-btn {
+    background-image: var(--gradient-btn);
+  }
+
+  .text-gradient-green {
+    background: var(--gradient-btn);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
