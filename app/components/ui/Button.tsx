@@ -11,6 +11,7 @@ export default function Button({
     variant = "primary",
     children,
     className = "",
+
     ...props
 }: ButtonProps) {
     const baseStyles =
@@ -18,7 +19,7 @@ export default function Button({
 
     const variantStyles = {
         primary:
-            "bg-gradient-btn rounded-full text-dark-deep hover:opacity-90 active:scale-95",
+            "rounded-full text-dark-deep hover:opacity-90 active:scale-95",
         secondary:
             "bg-transparent text-white-primary text-base font-normal hover:opacity-80 active:scale-95",
     };

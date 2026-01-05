@@ -5,6 +5,7 @@
   --dark-medium: #1C1C1C;
   --white-primary: #FFFFFF;
   --green-secondary: #05CA3C;
+  --green-bright: #00FF94;
   --purple-secondary: #8B5CF6;
   --gradient-btn: linear-gradient(270deg, #D4FE1A 0%, #39EEBE 100%);
   --gradient-finance: linear-gradient(180deg, #010400 0%, #062000 100%);
@@ -16,6 +17,7 @@
   --color-dark-medium: var(--dark-medium);
   --color-white-primary: var(--white-primary);
   --color-green-secondary: var(--green-secondary);
+  --color-green-bright: var(--green-bright);
   --color-purple-secondary: var(--purple-secondary);
 }
 
