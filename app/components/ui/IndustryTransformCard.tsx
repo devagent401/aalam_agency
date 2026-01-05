@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
 import clsx from "clsx";
 
@@ -11,6 +12,7 @@ export interface IndustryTransformCardProps {
     gradientType: "green" | "purple";
     checkmarkColor: "green" | "purple";
     buttonColor: string;
+    cardIndex?: number;
     className?: string;
 }
 
@@ -23,8 +25,11 @@ export default function IndustryTransformCard({
     gradientType,
     checkmarkColor,
     buttonColor,
+    cardIndex = 0,
     className,
 }: IndustryTransformCardProps) {
+    const cardRef = useRef<HTMLDivElement>(null);
+
     const gradientClass =
         gradientType === "green" ? "bg-finance-gradient" : "bg-healthcare-gradient";
     const checkmarkFilter =
@@ -32,13 +37,26 @@ export default function IndustryTransformCard({
             ? "brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(1352%) hue-rotate(89deg) brightness(97%) contrast(85%)"
             : "brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(1352%) hue-rotate(250deg) brightness(97%) contrast(85%)";
 
+
+    // Calculate z-index: later cards stack on top of earlier cards
+    const zIndex = cardIndex !== undefined ? cardIndex + 1 : 1;
+
+    // Calculate stack offset for visual separation
+    const stackOffset = cardIndex !== undefined ? cardIndex * 75 : 0;
+
     return (
         <div
+            ref={cardRef}
             className={clsx(
-                "relative rounded-lg p-6 md:p-8 overflow-hidden flex flex-col md:flex-row items-center gap-6 md:gap-8",
+                "sticky rounded-lg p-6 md:p-8 overflow-hidden flex flex-col md:flex-row items-center gap-6 md:gap-8",
                 gradientClass,
                 className
             )}
+            style={{
+                top: "20vh", // 80% toward the top (20vh from top)
+                transform: `translateY(${stackOffset}px)`,
+                zIndex: zIndex,
+            }}
         >
             {/* Flash Effect - Top Right Corner */}
             <Image

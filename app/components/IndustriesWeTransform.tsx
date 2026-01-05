@@ -66,7 +66,8 @@ const industries = [
 
 export default function IndustriesWeTransform() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-dark-deep">
+    <section className="py-12 md:py-16 lg:py-20 bg-dark-deep"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <h2 className="text-white-primary text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6">
@@ -91,6 +92,7 @@ export default function IndustriesWeTransform() {
               gradientType={industry.gradientType}
               checkmarkColor={industry.checkmarkColor}
               buttonColor={industry.buttonColor}
+              cardIndex={index}
             />
           ))}
         </div>

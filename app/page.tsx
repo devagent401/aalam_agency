@@ -12,6 +12,7 @@ export default function Home() {
       <CorePillars />
       <EngineeringApproach />
       <IndustriesWeTransform />
+      <div className="h-screen"></div>
     </main>
   );
 }
