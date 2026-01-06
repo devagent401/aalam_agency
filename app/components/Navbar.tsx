@@ -6,7 +6,7 @@ import Link from "next/link";
 import Button from "./ui/Button";
 
 const navigationLinks = [
-    { label: "Solutions", href: "#solutions" },
+    { label: "Solutions", href: "/solutions" },
     { label: "Industries", href: "#industries" },
     { label: "Case Studies", href: "#case-studies" },
     { label: "Company", href: "#company" },
