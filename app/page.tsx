@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import IndustriesWeTransform from "./components/IndustriesWeTransform";
 import SmartAIHelp from "./components/SmartAIHelp";
 import SolutionsOverview from "./components/SolutionsOverview";
+import TechnologyEcosystem from "./components/TechnologyEcosystem";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <CorePillars />
       <EngineeringApproach />
+      <TechnologyEcosystem />
       <IndustriesWeTransform />
       <SolutionsOverview />
       <CustomerTestimonials />
