@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./ui/Card";
 
 const pillars = [
@@ -39,9 +38,9 @@ export default function CorePillars() {
                 </h2>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-5 gap-6 md:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-6">
                     {/* AI & Automation - Left column, row 1, spans 2 rows */}
-                    <div className="col-span-2">
+                    <div className="md:col-span-2">
                         <Card
                             icon={pillars[0].icon}
                             title={pillars[0].title}
@@ -52,7 +51,7 @@ export default function CorePillars() {
                             imageContainerClassName="justify-center my-10"
                         />
                     </div>
-                    <div className="col-span-3 space-y-6">
+                    <div className="md:col-span-3 space-y-6">
                         <Card
                             icon={pillars[1].icon}
                             title={pillars[1].title}

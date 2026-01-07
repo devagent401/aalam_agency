@@ -9,8 +9,8 @@ export interface IndustryTransformCardProps {
     features: string[];
     robotImage: string;
     flashImage: string;
-    gradientType: "green" | "purple";
-    checkmarkColor: "green" | "purple";
+    gradientType: "green" | "purple" | "bronze" | "blue";
+    checkmarkColor: "green" | "purple" | "orange";
     buttonColor: string;
     cardIndex?: number;
     className?: string;
@@ -31,11 +31,20 @@ export default function IndustryTransformCard({
     const cardRef = useRef<HTMLDivElement>(null);
 
     const gradientClass =
-        gradientType === "green" ? "bg-finance-gradient" : "bg-healthcare-gradient";
+        gradientType === "green"
+            ? "bg-finance-gradient"
+            : gradientType === "purple"
+                ? "bg-healthcare-gradient"
+                : gradientType === "bronze"
+                    ? "bg-bronze-gradient"
+                    : "bg-crypto-gradient";
+
     const checkmarkFilter =
         checkmarkColor === "green"
             ? "brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(1352%) hue-rotate(89deg) brightness(97%) contrast(85%)"
-            : "brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(1352%) hue-rotate(250deg) brightness(97%) contrast(85%)";
+            : checkmarkColor === "orange"
+                ? "brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(1352%) hue-rotate(20deg) brightness(97%) contrast(85%)"
+                : "brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(1352%) hue-rotate(250deg) brightness(97%) contrast(85%)";
 
     const zIndex = cardIndex !== undefined ? cardIndex + 1 : 1;
 
@@ -65,11 +74,11 @@ export default function IndustryTransformCard({
             />
 
             <div className="flex-1 flex flex-col space-y-4 md:space-y-6 relative z-10">
-                <h3 className="text-white-primary text-2xl md:text-3xl lg:text-4xl font-bold">
+                <h3 className="text-white-primary text-2xl md:text-3xl lg:text-[2rem] font-bold">
                     {title}
                 </h3>
 
-                <p className="text-white-primary text-base md:text-lg opacity-90 leading-relaxed">
+                <p className="text-white-primary text-base md:text-xl font-light opacity-90 leading-relaxed">
                     {description}
                 </p>
 
@@ -77,7 +86,7 @@ export default function IndustryTransformCard({
                     {features.map((feature, index) => (
                         <li
                             key={index}
-                            className="flex items-center gap-3 text-white-primary text-base md:text-lg"
+                            className="flex items-center gap-3 text-white-primary font-normal text-base md:text-xl"
                         >
                             <Image
                                 src="/files/icons/checkIcon.png"

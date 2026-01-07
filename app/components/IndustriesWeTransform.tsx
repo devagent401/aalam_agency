@@ -18,13 +18,13 @@ const industries = [
     buttonColor: "#0d4f3c", // dark teal-green
   },
   {
-    title: "Healthcare & Life Sciences",
+    title: "Retail & E-Commerce",
     description:
-      "AI-powered diagnostic tools, patient care automation, and medical data analysis for faster, more accurate outcomes.",
+      "Conversational AI assistants, dynamic pricing algorithms, and predictive inventory management systems.",
     features: [
-      "Rapid AI Diagnostics",
-      "Automated Patient Care",
-      "Precision Data Insights",
+      "24/7 Support Bots",
+      "Smart Inventory Tracking",
+      "Hyper-Personalized Offers",
     ],
     robotImage: "/files/object/robot2.png",
     flashImage: "/files/flash/flash-lue.png",
@@ -41,26 +41,26 @@ const industries = [
       "Smart Risk Analysis",
       "Algorithmic Trading Bots",
     ],
-    robotImage: "/files/object/robot2.png",
+    robotImage: "/files/object/robot3.png",
     flashImage: "/files/flash/flash-deep-green.png",
     gradientType: "green" as const,
     checkmarkColor: "purple" as const,
     buttonColor: "#4a1a66", // dark purple
   },
   {
-    title: "Healthcare & Life Sciences",
+    title: "Crypto & Trading",
     description:
-      "AI-powered fraud detection, risk assessment, and automated trading systems for financial institutions.",
+      "Secure, data-driven financial ecosystems powered by autonomous machine learning.",
     features: [
-      "Rapid AI Diagnostics",
-      "Automated Patient Care",
-      "Precision Data Insights",
+      "Automated Trade Execution",
+      "Smart Sentiment Analysis",
+      "Real-time Portfolio Tracking",
     ],
-    robotImage: "/files/object/robot2.png",
-    flashImage: "/files/flash/flash-lue.png",
-    gradientType: "purple" as const,
-    checkmarkColor: "purple" as const,
-    buttonColor: "#4a1a66", // dark purple
+    robotImage: "/files/object/robot4.png",
+    flashImage: "/files/flash/flash-yellow.png",
+    gradientType: "bronze" as const,
+    checkmarkColor: "orange" as const,
+    buttonColor: "#663300", // dark bronze/orange
   },
 ];
 
@@ -70,12 +70,12 @@ export default function IndustriesWeTransform() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <h2 className="text-white-primary text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6">
+        <h2 className="text-white-primary text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-center mb-4 md:mb-6">
           Industries We Transform
         </h2>
 
         {/* Subtitle */}
-        <p className="text-white-primary text-base md:text-lg text-center opacity-90 max-w-3xl mx-auto mb-12 md:mb-16">
+        <p className="text-white-primary text-base md:text-base lg:text-xl text-center opacity-90 max-w-3xl mx-auto mb-12 md:mb-16">
           Deploying cutting-edge AI and automation across high-impact sectors.
         </p>
 

@@ -13,6 +13,7 @@
   --gradient-ai-bots: linear-gradient(180deg, #001a0d 0%, #003d1f 100%);
   --gradient-crypto: linear-gradient(180deg, #001a33 0%, #003366 100%);
   --gradient-web-dev: linear-gradient(180deg, #1a0033 0%, #330066 100%);
+  --gradient-bronze: linear-gradient(180deg, #1a0f00 0%, #331a00 100%);
 }
 
 @theme inline {
@@ -81,5 +82,10 @@
   .bg-web-dev-gradient {
     background: var(--gradient-web-dev);
     box-shadow: 0px 0px 70px 0px rgba(51, 0, 102, 0.5) inset;
+  }
+
+  .bg-bronze-gradient {
+    background: var(--gradient-bronze);
+    box-shadow: 0px 0px 70px 0px rgba(51, 26, 0, 0.5) inset;
   }
 }

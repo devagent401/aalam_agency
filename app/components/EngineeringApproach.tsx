@@ -37,18 +37,18 @@ export default function EngineeringApproach() {
         <section className="py-12 md:py-16 lg:py-20 bg-dark-deep">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Title */}
-                <h2 className="text-white-primary text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6">
+                <h2 className="text-white-primary text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-center mb-4 md:mb-6">
                     Our Engineering Approach
                 </h2>
 
                 {/* Subtitle */}
-                <p className="text-white-primary text-base md:text-lg text-center opacity-90 max-w-3xl mx-auto mb-12 md:mb-16">
+                <p className="text-white-primary text-base md:text-lg lg:text-xl text-center opacity-90 max-w-3xl mx-auto mb-12 md:mb-16">
                     From concept to deployment, we follow a rigorous methodology that
                     ensures scalability, security, and performance.
                 </p>
 
                 {/* Steps - Horizontal Layout */}
-                <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-8">
+                <div className="flex flex-row items-stretch overflow-auto gap-6 md:gap-12">
                     {steps.map((step, index) => (
                         <div key={index} className="flex-1">
                             <EngineeringStepCard

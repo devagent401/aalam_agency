@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./ui/Button";
@@ -56,7 +56,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-4 md:space-x-6 xl:space-x-8">
                         {navigationLinks.map((link) => (
                             <Link
                                 key={link.href}
@@ -70,7 +70,7 @@ export default function Navbar() {
 
                     {/* Desktop CTA Button */}
                     <div className="hidden md:block">
-                        <Button variant="secondary">Book Consultation</Button>
+                        <Button variant="secondary"><span className="xl:inline-block hidden">Book</span>Consultation</Button>
                     </div>
 
                     {/* Mobile Menu Button */}
