@@ -84,7 +84,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="/contract"
                                     className="text-white-primary/70 hover:text-green-bright transition-colors"
                                 >
                                     Contact Us
