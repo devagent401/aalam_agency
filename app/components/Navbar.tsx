@@ -7,9 +7,9 @@ import Button from "./ui/Button";
 
 const navigationLinks = [
     { label: "Solutions", href: "/solutions" },
-    { label: "Industries", href: "#industries" },
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Company", href: "#company" },
+    { label: "Team", href: "/team" },
+    { label: "Careers", href: "/careers" },
+    { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
