@@ -6,10 +6,15 @@ import Link from "next/link";
 import Button from "./ui/Button";
 
 const navigationLinks = [
-    { label: "Solutions", href: "/solutions" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Products", href: "/products" },
+    { label: "Projects", href: "/projects" },
+    { label: "Blog", href: "/blog" },
     { label: "Team", href: "/team" },
     { label: "Careers", href: "/careers" },
-    { label: "Blog", href: "/blog" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact Us", href: "/contract" },
 ];
 
 export default function Navbar() {
@@ -21,14 +26,9 @@ export default function Navbar() {
             const scrollPosition = window.scrollY;
             setIsScrolled(scrollPosition > 10);
         };
-
-        // Check initial scroll position
         handleScroll();
 
-        // Add scroll event listener
         window.addEventListener("scroll", handleScroll, { passive: true });
-
-        // Cleanup
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
