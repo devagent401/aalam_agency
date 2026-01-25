@@ -36,7 +36,7 @@ const solutions = [
 export default function SolutionsOverview() {
     return (
         <section className="py-12 md:py-16 lg:py-20 bg-dark-deep">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
                 {/* Top Badge */}
                 <div className="flex justify-center mb-6 md:mb-8">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-medium border border-green-secondary/20">
@@ -48,8 +48,8 @@ export default function SolutionsOverview() {
                 </div>
 
                 {/* Heading */}
-                <h2 className="text-white-primary text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 max-w-5xl mx-auto leading-tight">
-                    Systematize your success and scale operations without the overhead.
+                <h2 className="text-white-primary text-2xl md:text-3xl lg:text-6xl font-bold text-center mb-6 md:mb-8 max-w-5xl mx-auto leading-tight">
+                    Systematize your success and scale operations <span className="text-green-secondary">without the overhead.</span>
                 </h2>
 
                 {/* Description */}

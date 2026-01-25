@@ -24,7 +24,7 @@ export default function Hero() {
                 <div className="absolute right-0 top-1/3 w-1 h-80 bg-green-secondary blur-3xl" />
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 z-10">
+            <div className="relative max-w-7xl mx-auto py-12 md:py-20 z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-5  items-center ">
                     {/* Left Section - Content */}
                     <div className=" col-span-3 space-y-6 md:space-y-8 w-full">

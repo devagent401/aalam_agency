@@ -39,7 +39,7 @@ const pillars = [
 export default function CorePillars() {
     return (
         <section className="py-12 bg-dark-deep">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
                 <h2 className="text-white-primary text-2xl md:text-3xl lg:text-[40px] font-semibold mb-8 md:mb-12">
                     Our Expertise

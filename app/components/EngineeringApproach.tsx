@@ -35,7 +35,7 @@ const steps = [
 export default function EngineeringApproach() {
     return (
         <section className="py-12 md:py-16 lg:py-20 bg-dark-deep">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
                 <h2 className="text-white-primary text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-center mb-4 md:mb-6">
                     Our Engineering Approach

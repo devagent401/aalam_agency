@@ -29,10 +29,10 @@ const faqs = [
 
 export default function SmartAIHelp() {
     return (
-        <section className="py-12 md:py-20 lg:py-28 bg-dark-deep">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-dark-deep">
+            <div className="max-w-7xl mx-auto">
                 <div className="max-w-4xl mx-auto text-center space-y-8 mb-12 lg:mb-16">
-                    {/* Top Badge */}
+
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-medium border border-green-secondary/20">
                         <span className="w-2 h-2 bg-green-secondary rounded-full"></span>
                         <span className="text-green-secondary text-sm md:text-base font-medium">
@@ -40,20 +40,18 @@ export default function SmartAIHelp() {
                         </span>
                     </div>
 
-                    {/* Heading */}
-                    <h2 className="text-white-primary text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                    <h2 className="max-w-2xl mx-auto text-white-primary text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
                         Step Into the World of <span className="text-green-bright">Smarter AI</span>
                     </h2>
 
-                    {/* Description */}
-                    <p className="text-white-primary/70 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+
+                    <p className="text-white-primary/70 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                         We do not support the generation of violent, explicit, political,
                         or otherwise restricted content. Human and automated monitoring
                         help enforce these guidelines.
                     </p>
                 </div>
 
-                {/* FAQ Accordion - Centered and max-width */}
                 <div className="max-w-3xl mx-auto space-y-4">
                     {faqs.map((faq, index) => (
                         <FAQAccordionItem

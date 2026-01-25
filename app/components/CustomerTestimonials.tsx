@@ -81,7 +81,7 @@ export default function CustomerTestimonials() {
 
     return (
         <section className="py-12 md:py-16 lg:py-20 bg-dark-deep">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
                 {/* Top Badge */}
                 <div className="flex justify-center mb-6 md:mb-8">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-medium border border-green-secondary/20">
