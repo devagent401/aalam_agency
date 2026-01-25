@@ -3,16 +3,16 @@ import { Check } from "lucide-react";
 const withoutAI = [
     "Manual data entry and processing",
     "Slow customer response times",
-    "High operational costs",
+    "Misc-alignment and waste",
+    "Limited scale and reach",
     "Human errors and inconsistencies",
-    "Limited scalability",
-    "Reactive decision making",
+    "Slow decision making",
 ];
 
 const withAI = [
     "Automated workflows and processing",
     "Instant, 24/7 customer support",
-    "73% reduction in costs",
+    "72% reduction in costs",
     "99.9% accuracy and consistency",
     "Infinite scalability",
     "Predictive analytics and insights",
@@ -32,7 +32,7 @@ export default function BeforeAfterComparison() {
                     {/* Comparison Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                         {/* Without AI - Red/Dark Card */}
-                        <div className="rounded-2xl bg-gradient-to-br from-red-950/50 to-red-900/30 border border-red-900/50 p-6 md:p-8">
+                        <div className="rounded-2xl bg-linear-to-br from-red-950/50 to-red-900/30 border border-red-900/50 p-6 md:p-8">
                             <h3 className="text-red-400 text-xl md:text-2xl font-bold mb-6">
                                 Without AI
                             </h3>
@@ -49,7 +49,7 @@ export default function BeforeAfterComparison() {
                         </div>
 
                         {/* With AI - Green Card */}
-                        <div className="rounded-2xl bg-gradient-to-br from-green-950/50 to-green-900/30 border border-green-900/50 p-6 md:p-8">
+                        <div className="rounded-2xl bg-linear-to-br from-green-950/50 to-green-900/30 border border-green-900/50 p-6 md:p-8">
                             <h3 className="text-green-bright text-xl md:text-2xl font-bold mb-6">
                                 With AI
                             </h3>

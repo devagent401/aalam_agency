@@ -4,6 +4,7 @@ const services = [
     {
         title: "AI Bots & Agents",
         description: "Intelligent automation systems that work 24/7 to handle customer service, data processing, and complex workflows.",
+        icon: "/files/service/1.png",
         features: [
             "Custom LLM Chatbots",
             "Multi-Agent Systems",
@@ -14,6 +15,7 @@ const services = [
     {
         title: "Crypto & Trading",
         description: "High-frequency trading bots, arbitrage engines, and blockchain solutions for maximum profit optimization.",
+        icon: "/files/service/21.png",
         features: [
             "HFT Trading Bots",
             "Arbitrage Systems",
@@ -24,6 +26,7 @@ const services = [
     {
         title: "Web & App Development",
         description: "Modern, scalable web and mobile applications built with cutting-edge frameworks and best practices.",
+        icon: "/files/service/20.png",
         features: [
             "Full-Stack Development",
             "Mobile Apps (iOS/Android)",
@@ -32,33 +35,36 @@ const services = [
         ],
     },
     {
-        title: "AI Bots & Agents",
-        description: "Intelligent automation systems that work 24/7 to handle customer service, data processing, and complex workflows.",
+        title: "AI Data & Agents",
+        description: "Advanced data processing and AI agent systems for complex enterprise-level industrial applications.",
+        icon: "/files/service/12.png",
         features: [
-            "Custom LLM Chatbots",
-            "Multi-Agent Systems",
-            "Workflow Automation",
-            "Voice AI Integration",
+            "Predictive Analytics",
+            "Data Lake Integration",
+            "Real-time Monitoring",
+            "Process Optimization",
         ],
     },
     {
         title: "Crypto & Trading",
-        description: "High-frequency trading bots, arbitrage engines, and blockchain solutions for maximum profit optimization.",
+        description: "Scalable blockchain infrastructure and trading systems for institutional-grade financial operations.",
+        icon: "/files/service/2.png",
         features: [
-            "HFT Trading Bots",
-            "Arbitrage Systems",
-            "Smart Contract Dev",
-            "DeFi Protocols",
+            "Liquidity Engines",
+            "Yield Optimization",
+            "Asset Tokenization",
+            "DEX Integration",
         ],
     },
     {
         title: "Web & App Development",
-        description: "Modern, scalable web and mobile applications built with cutting-edge frameworks and best practices.",
+        description: "Enterprise-grade web solutions with focus on performance, security, and exceptional user experience.",
+        icon: "/files/service/3.png",
         features: [
-            "Full-Stack Development",
-            "Mobile Apps (iOS/Android)",
-            "Progressive Web Apps",
-            "API Integration",
+            "Cloud-Native Apps",
+            "Microservices Arch",
+            "Enterprise Security",
+            "24/7 Monitoring",
         ],
     },
 ];
@@ -98,6 +104,7 @@ export default function SolutionsHero() {
                             title={service.title}
                             description={service.description}
                             features={service.features}
+                            icon={service.icon}
                         />
                     ))}
                 </div>
