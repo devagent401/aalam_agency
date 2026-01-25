@@ -5,11 +5,19 @@ const pillars = [
         icon: "/files/icons/rounded.png",
         title: "AI & Automation",
         description: "Custom Agents, LLM Chatbots & Workflow Automation",
-        showButton: true,
+        showButton: false,
     },
+
     {
         icon: "/files/icons/ractangular.png",
         title: "WEB3 & Blockchain",
+        description: "DApps, Smart Contracts, NFT & DeFi Protocols",
+        info: ["Layer 2 Solutions & Scaling", "Decenstizlized Exchanges (DEX)", "Oracles & Data Feeds"],
+        showButton: false,
+    },
+    {
+        icon: "/files/icons/business.png",
+        title: "Business Process Automation",
         description: "DApps, Smart Contracts, NFT & DeFi Protocols",
         info: ["Layer 2 Solutions & Scaling", "Decenstizlized Exchanges (DEX)", "Oracles & Data Feeds"],
         showButton: false,
@@ -34,54 +42,65 @@ export default function CorePillars() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Title */}
                 <h2 className="text-white-primary text-2xl md:text-3xl lg:text-[40px] font-semibold mb-8 md:mb-12">
-                    Our Core Pillars
+                    Our Expertise
                 </h2>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-6">
-                    {/* AI & Automation - Left column, row 1, spans 2 rows */}
+                <div className=" grid grid-cols-1 md:grid-cols-5 gap-6">
+                    {/* AI & Automation - Large Card */}
                     <div className="md:col-span-2">
                         <Card
                             icon={pillars[0].icon}
                             title={pillars[0].title}
                             description={pillars[0].description}
-                            showButton={pillars[0].showButton}
+                            showButton={true}
                             className="h-[626px]"
-                            imageClassName="w-[16.875rem] h-[16.875rem]"
-                            imageContainerClassName="justify-center my-10"
+                            imageClassName="w-[18rem] h-[18rem]"
+                            imageContainerClassName="justify-center mt-12 mb-8"
                         />
                     </div>
-                    <div className="md:col-span-3 space-y-6">
-                        <Card
-                            icon={pillars[1].icon}
-                            title={pillars[1].title}
-                            description={pillars[1].description}
-                            showButton={pillars[1].showButton}
-                            info={pillars[1].info}
-                            imageClassName="w-60 md:h-60"
-                            className="h-[300px]"
-                        />
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+                    {/* Small Cards Grid */}
+                    <div className="md:col-span-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <Card
+                                icon={pillars[1].icon}
+                                title={pillars[1].title}
+                                description={pillars[1].description}
+                                showButton={false}
+                                className="h-[300px]"
+                                imageClassName="w-40 h-40"
+                                imageContainerClassName="justify-start -mr-4 -mt-4"
+                            />
                             <Card
                                 icon={pillars[2].icon}
                                 title={pillars[2].title}
                                 description={pillars[2].description}
-                                showButton={pillars[2].showButton}
-                                imageClassName="w-[12.545rem] h-[12.545rem] rotate-[20deg] -mt-14"
-                                className="h-[305px]"
+                                showButton={false}
+                                className="h-[300px]"
+                                imageClassName="w-32 h-32"
+                                imageContainerClassName="justify-start -mr-4 -mt-4"
                             />
-
                             <Card
                                 icon={pillars[3].icon}
                                 title={pillars[3].title}
                                 description={pillars[3].description}
-                                showButton={pillars[3].showButton}
-                                imageClassName="w-[9.601rem] h-[9.601rem] "
-                                className="h-[305px]"
+                                showButton={false}
+                                className="h-[300px]"
+                                imageClassName="w-44 h-44"
+                                imageContainerClassName="justify-start  -mt-6"
+                            />
+                            <Card
+                                icon={pillars[4].icon}
+                                title={pillars[4].title}
+                                description={pillars[4].description}
+                                showButton={false}
+                                className="h-[300px]"
+                                imageClassName="w-40 h-40"
+                                imageContainerClassName="justify-start -mt-6"
                             />
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

@@ -88,4 +88,12 @@
     background: var(--gradient-bronze);
     box-shadow: 0px 0px 70px 0px rgba(51, 26, 0, 0.5) inset;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

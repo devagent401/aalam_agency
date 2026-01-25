@@ -66,16 +66,16 @@ const industries = [
 
 export default function IndustriesWeTransform() {
   return (
-    <section className="py-12 md:py-16 lg:pb-60 bg-gray-100"
+    <section className="py-12 md:py-16 lg:pb-60 bg-dark-deep"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <h2 className="text-dark-deep text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-center mb-4 md:mb-6">
+        <h2 className="text-white-primary text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-center mb-4 md:mb-6">
           Industries We Transform
         </h2>
 
         {/* Subtitle */}
-        <p className="text-dark-deep text-base md:text-base lg:text-xl text-center opacity-90 max-w-3xl mx-auto mb-12 md:mb-16">
+        <p className="text-white-primary text-base md:text-base lg:text-xl text-center opacity-90 max-w-3xl mx-auto mb-12 md:mb-16">
           Deploying cutting-edge AI and automation across high-impact sectors.
         </p>
 
