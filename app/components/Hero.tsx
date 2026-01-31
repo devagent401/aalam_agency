@@ -27,7 +27,8 @@ export default function Hero() {
             <div className="relative max-w-7xl mx-auto py-12 md:py-20 z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-5  items-center ">
                     {/* Left Section - Content */}
-                    <div className=" col-span-3 space-y-6 md:space-y-8 w-full">
+                    <div className="col-span-3 space-y-6 md:space-y-8 w-full flex flex-col justify-between ">
+
                         {/* Headline */}
                         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
                             <span className="text-white-primary">BUILDING THE </span>
@@ -43,13 +44,13 @@ export default function Hero() {
                             From Enterprise ERPs To AI Agents And High-Frequency Trading —
                             Engineering Scalable Solutions For The Digital Economy.
                         </p>
-
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <Button variant="primary" className="text-base md:text-lg px-8 py-4">
+                        <div>
+                            <Button variant="primary" className="bg-green-bright text-dark-deep text-base md:text-lg px-8 py-4 font-bold w-64">
                                 Get Started
                             </Button>
                         </div>
+
+
                     </div>
 
                     {/* Right Section - Character Image */}

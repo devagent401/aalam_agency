@@ -33,64 +33,65 @@ import {
     Network
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type TechItem = {
     name: string;
-    icon: React.ElementType;
+    icon: React.ReactNode;
 };
 
 const technologyData: Record<string, TechItem[]> = {
     AI: [
-        { name: "Chat GPT", icon: Bot },
-        { name: "Lang Chain", icon: LinkIcon },
-        { name: "Llama Index", icon: Zap },
-        { name: "Prompt Engineering", icon: Code2 },
-        { name: "Firebase Genkit", icon: Flame },
+        { name: "Chat GPT", icon: <Image src="/files/technology/1.png" alt="Chat GPT" width={24} height={24} /> },
+        { name: "Lang Chain", icon: <Image src="/files/technology/2.png" alt="Lang Chain" width={24} height={24} /> },
+        { name: "Llama Index", icon: <Image src="/files/technology/3.png" alt="Llama Index" width={24} height={24} /> },
+        { name: "Prompt Engineering", icon: <Image src="/files/technology/4.png" alt="Prompt Engineering" width={24} height={24} /> },
+        { name: "Firebase Genkit", icon: <Image src="/files/technology/5.png" alt="Firebase Genkit" width={24} height={24} /> },
     ],
     Frontend: [
-        { name: "Next.js", icon: Globe },
-        { name: "React", icon: Atom },
-        { name: "TypeScript", icon: Terminal },
-        { name: "Tailwind CSS", icon: Palette },
-        { name: "Motion", icon: Activity },
+        { name: "Next.js", icon: <Image src="/files/technology/next.png" alt="Next.js" width={24} height={24} /> },
+        { name: "React", icon: <Image src="/files/technology/react.png" alt="React" width={24} height={24} /> },
+        { name: "TypeScript", icon: <Image src="/files/technology/8.png" alt="TypeScript" width={24} height={24} /> },
+        { name: "Tailwind CSS", icon: <Image src="/files/technology/9.png" alt="Tailwind CSS" width={24} height={24} /> },
+        { name: "Motion", icon: <Image src="/files/technology/10.png" alt="Motion" width={24} height={24} /> },
     ],
     Backend: [
-        { name: "Node.js", icon: Cpu },
-        { name: "Python", icon: FileJson },
-        { name: "Go", icon: Box },
-        { name: "PostgreSQL", icon: Database },
-        { name: "Redis", icon: Layers },
+        { name: "Node.js", icon: <Image src="/files/technology/nodejs.svg" alt="Node.js" width={24} height={24} /> },
+        { name: "Python", icon: <Image src="/files/technology/python.svg" alt="Python" width={24} height={24} /> },
+        { name: "Go", icon: <Image src="/files/technology/go.svg" alt="Go" width={24} height={24} /> },
+        { name: "PostgreSQL", icon: <Image src="/files/technology/postgresql.svg" alt="PostgreSQL" width={24} height={24} /> },
+        { name: "Redis", icon: <Image src="/files/technology/redis.svg" alt="Redis" width={24} height={24} /> },
     ],
     Databases: [
-        { name: "MongoDB", icon: Database },
-        { name: "Pinecone", icon: TreePine },
-        { name: "Supabase", icon: Cloud },
-        { name: "Firebase", icon: Flame },
+        { name: "MongoDB", icon: <Image src="/files/technology/mongodb.svg" alt="MongoDB" width={24} height={24} /> },
+        { name: "Pinecone", icon: <Image src="/files/technology/pinecone.png" alt="Pinecone" width={24} height={24} /> },
+        { name: "Supabase", icon: <Image src="/files/technology/supabase.svg" alt="Supabase" width={24} height={24} /> },
+        { name: "Firebase", icon: <Image src="/files/technology/firebase.svg" alt="Firebase" width={24} height={24} /> },
     ],
     QA: [
-        { name: "Jest", icon: CheckCircle },
-        { name: "Cypress", icon: Eye },
-        { name: "Playwright", icon: MousePointer },
+        { name: "Jest", icon: <Image src="/files/technology/jest.svg" alt="Jest" width={24} height={24} /> },
+        { name: "Cypress", icon: <Image src="/files/technology/cypress.svg" alt="Cypress" width={24} height={24} /> },
+        { name: "Playwright", icon: <Image src="/files/technology/playwright.svg" alt="Playwright" width={24} height={24} /> },
     ],
     Design: [
-        { name: "Figma", icon: PenTool },
-        { name: "Adobe XD", icon: Layout },
-        { name: "Canva", icon: ImageIcon },
+        { name: "Figma", icon: <Image src="/files/technology/figma.svg" alt="Figma" width={24} height={24} /> },
+        { name: "Adobe XD", icon: <Image src="/files/technology/adobexd.svg" alt="Adobe XD" width={24} height={24} /> },
+        { name: "Canva", icon: <Image src="/files/technology/canva.svg" alt="Canva" width={24} height={24} /> },
     ],
     "Monitoring tools": [
-        { name: "Sentry", icon: Bug },
-        { name: "Datadog", icon: Search },
-        { name: "New Relic", icon: BarChart },
+        { name: "Sentry", icon: <Image src="/files/technology/sentry.svg" alt="Sentry" width={24} height={24} /> },
+        { name: "Datadog", icon: <Image src="/files/technology/datadog.svg" alt="Datadog" width={24} height={24} /> },
+        { name: "New Relic", icon: <Image src="/files/technology/newrelic.svg" alt="New Relic" width={24} height={24} /> },
     ],
     Deployment: [
-        { name: "Vercel", icon: ArrowUpRight },
-        { name: "Docker", icon: Container },
-        { name: "Kubernetes", icon: Network },
+        { name: "Vercel", icon: <Image src="/files/technology/vercel.svg" alt="Vercel" width={24} height={24} /> },
+        { name: "Docker", icon: <Image src="/files/technology/docker.svg" alt="Docker" width={24} height={24} /> },
+        { name: "Kubernetes", icon: <Image src="/files/technology/kubernetes.svg" alt="Kubernetes" width={24} height={24} /> },
     ],
     "Cloud Services": [
-        { name: "AWS", icon: Cloud },
-        { name: "GCP", icon: Cloud },
-        { name: "Azure", icon: Cloud },
+        { name: "AWS", icon: <Image src="/files/technology/aws.svg" alt="AWS" width={24} height={24} /> },
+        { name: "GCP", icon: <Image src="/files/technology/gcp.svg" alt="GCP" width={24} height={24} /> },
+        { name: "Azure", icon: <Image src="/files/technology/azure.svg" alt="Azure" width={24} height={24} /> },
     ],
 };
 
@@ -150,7 +151,7 @@ export default function TechnologyEcosystem() {
                                 className="group relative bg-[#111111] border border-gray-800 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:border-green-secondary/50 hover:bg-[#161616] hover:-translate-y-1 cursor-default"
                             >
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-900 group-hover:bg-green-secondary/10 transition-colors duration-300">
-                                    <Icon className="w-6 h-6 text-gray-400 group-hover:text-green-secondary transition-colors duration-300" />
+                                    {tech.icon}
                                 </div>
                                 <span className="text-sm md:text-base font-medium text-gray-300 group-hover:text-white text-center">
                                     {tech.name}

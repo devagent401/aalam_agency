@@ -38,7 +38,7 @@ export default function EngineeringApproach() {
             <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
                 <h2 className="text-white-primary text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-center mb-4 md:mb-6">
-                    Our Engineering Approach
+                    Our Engineering <label className="text-green-bright">Approach</label>
                 </h2>
 
                 {/* Subtitle */}
